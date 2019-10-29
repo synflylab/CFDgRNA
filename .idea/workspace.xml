@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f68f708d-6276-4d6d-972c-2bfb036f8c85" name="Default Changelist" comment="" />
+    <list default="true" id="f68f708d-6276-4d6d-972c-2bfb036f8c85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfdgrna.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfdgrna.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfdgrna.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-g TCCTTTCGATCCGCGCCTTT -g GCAACATCAATTCATTAATT -g GTTAAGCTGAACCATTTCAT -g GAGTGAAAGTGACAGCTTGG -g AAGTTTTTAGCCTAAGATCT -g TCGACTGTGAATCTCTCACG -g AGGGGTCCCTATAATCAACA -g CAGCTTAGTCCGCCGCCGAG -g GACGAGGGTCATCATCCCGA -g AATCGCTGTAACAGGTGGAA" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -81,6 +84,8 @@
       <workItem from="1572254105144" duration="272000" />
       <workItem from="1572254610311" duration="13496000" />
       <workItem from="1572284038058" duration="539000" />
+      <workItem from="1572343716271" duration="314000" />
+      <workItem from="1572364158853" duration="650000" />
     </task>
     <servers />
   </component>
@@ -92,13 +97,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CFDgRNA$cfdgrna.coverage" NAME="cfdgrna Coverage Results" MODIFIED="1572284227937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CFDgRNA$cfdgrna.coverage" NAME="cfdgrna Coverage Results" MODIFIED="1572364811506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

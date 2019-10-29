@@ -2,7 +2,9 @@
 
 from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
+import argparse
 import math
+import logging
 
 
 class uDNA(Seq):
@@ -144,18 +146,29 @@ class Assembler:
 
 
 if __name__ == "__main__":
-    ass = Assembler([
-        "TCCTTTCGATCCGCGCCTTT",
-        "GCAACATCAATTCATTAATT",
-        "GTTAAGCTGAACCATTTCAT",
-        "GAGTGAAAGTGACAGCTTGG",
-        "AAGTTTTTAGCCTAAGATCT",
-        "TCGACTGTGAATCTCTCACG",
-        "AGGGGTCCCTATAATCAACA",
-        "CAGCTTAGTCCGCCGCCGAG",
-        "GACGAGGGTCATCATCCCGA",
-        "AATCGCTGTAACAGGTGGAA"
-    ], prefix="VM_")
+
+    parser = argparse.ArgumentParser(description='pCDF5 Guide RNA array designer')
+    parser.add_argument('--guides', help='Sequence of gRNAs (comma separated) to include in the assembly')
+    parser.add_argument('--grna', '-g', action='append', help='Guide RNA to include')
+    parser.add_argument('--log', help='Logging level')
+    parser.add_argument('--debug', help='Enable debug logging')
+    args = parser.parse_args()
+
+    if args.debug:
+        args.log = 'DEBUG'
+
+    if args.log:
+        logging.basicConfig(level=args.log.upper())
+        logging.getLogger('BiopythonWarning').setLevel(logging.INFO)
+
+    if args.guides:
+        guides = args.guides
+    else:
+        guides = []
+    if args.grna:
+        guides = guides + args.grna
+
+    ass = Assembler(guides, prefix="VM_")
     ass.assemble()
     for key, primer in ass.primers.items():
         print(ass.prefix + key,"\t", primer)
